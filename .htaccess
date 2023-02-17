@@ -1,0 +1,14 @@
+# 404
+ErrorDocument 404 /notfound.html
+# dir browsing
+Options –Indexes
+Options All -Indexes
+
+<files ".htaccess">
+
+order allow,deny
+
+deny from all
+
+</files>
+
