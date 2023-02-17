@@ -1,5 +1,5 @@
 # 404
-ErrorDocument 404 /notfound.html
+ErrorDocument 404 /404
 # dir browsing
 Options –Indexes
 Options All -Indexes
