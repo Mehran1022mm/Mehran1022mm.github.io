@@ -1,0 +1,165 @@
+/* Coded by Mehran1022 - Inspired by Katana ZERO */
+/* Made with ❤️ by Mehran - https://github.com/Mehran1022mm */
+
+@font-face {
+  font-family: 'Retroville NC';
+  src: url('../font/RetroVilleNC.woff2') format('woff2'),
+       url('../font/RetroVilleNC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --background-color: #0a0a0a;
+  --text-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Retroville NC', sans-serif;
+  color: var(--text-color);
+  background: url('../img/background.gif') no-repeat center center fixed;
+  background-size: cover;
+  background-color: var(--background-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 1.5rem 2rem;
+  max-width: 600px;
+  text-align: center;
+  width: 100%;
+  opacity: 0; /* Start with hidden container */
+  animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  animation: scaleUp 0.8s ease-out;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+ul li strong {
+  font-weight: bold;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.colorful {
+  display: inline-block;
+  text-decoration: underline;
+  animation: color-change 2s infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #37ffff;
+  }
+  50% {
+    color: #AE00FA;
+  }
+  100% {
+    color: #E00022;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
